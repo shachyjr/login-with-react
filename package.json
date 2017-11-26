@@ -25,7 +25,10 @@
   },
   "homepage": "https://github.com/shachyjr/login-with-react#readme",
   "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "mongoose": "^4.13.5",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-router-dom": "^4.2.2"
