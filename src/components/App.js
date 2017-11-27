@@ -22,12 +22,10 @@ class App extends Component {
 
   handleLogin(event) {
     event.preventDefault();
-    console.log(`username: ${this.state.username} \npassword: ${this.state.password}`);
     const http = new XMLHttpRequest();
     http.open('POST', '/login', true);
     http.onreadystatechange = () => {
       if (http.readyState === 4 && http.status === 200) {
-        console.log(http.responseText);
         this.setState({ user: http.responseText });
         this.props.history.push('/home');
       }
@@ -45,7 +43,6 @@ class App extends Component {
   }
 
   handleLogout() {
-    console.log("INSIDE HANDLE LOGOUT");
     this.setState({ user: null });
     this.props.history.push('/');
   }
